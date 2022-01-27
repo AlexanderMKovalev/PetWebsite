@@ -1,0 +1,15 @@
+iframe {
+    border:1px solid grey;
+}
+table {
+    border-collapse: collapse;
+}
+th {
+    text-align: center;
+}
+
+th, td {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: 1px solid lightgray;
+  }

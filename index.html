@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <title>Ontario Animal Rescue</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/w3.css">
+      <link rel="stylesheet" href="assets/style.css">
+
+      <script>
+        // Thanks to https://stackoverflow.com/a/32162488
+        // For some reason this does not work if called as a function
+        // Probably because 'this' is a different thing that way
+        function autoIFrameHeight() {
+          this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px';
+        }
+      </script>   
+
+  </head>
+  
+  <body>
+
+    <div class="w3-display-container" style="margin-bottom:50px">
+      <img src="assets/cat.jpg" style="width:100%">
+      <div class="w3-display-bottomleft w3-container w3-green w3-hover-teal w3-hide-small" style="bottom:10%;opacity:0.7;width:50%">
+        <h1><b>Ontario Animal Rescue</b></h1>
+      </div>
+      <div class="w3-display-topright w3-container w3-green w3-hover-teal w3-hide-small" style="top:10%;opacity:0.7;width:20%">
+        <h2><b>CISC/CMPE 332</b></h2>
+        <h4>Vasa Shpatrov</h4>
+        <h4>Stephen Obadinma</h4>
+        <h4>Alexander Kovalev</h4>
+      </div>
+    </div>
+
+    <div class="w3-row w3-container" style="margin:50px 10px">
+        <h5>
+        We at Ontario Animal Rescue believe that every animal deserves to be rescued. We have an extensive network of 
+        SPCA Branches, Rescue Organizations, and Shelters that we use to provide services to all of Ontario. Our team of
+        paid employees and volunteers work tirelessly to bring you the best service possible. You can use this site to take care
+        of whatever business you need done with one of our organizations or to find out more information. Use the menus down below. Enjoy!
+        </h5>
+    </div>
+
+    <div class="w3-row w3-container" style="margin:50px 0">
+
+      <div class="w3-half w3-container">
+        <div class="w3-topbar w3-border-green">
+          <h2>All the animals currently housed in a given SPCA location</h2>
+          <p>Requirement #1</p>
+          <iframe src="animalsAtBranchIndex.php" style="width: 100%;" onload="this.style.height=(this.contentWindow.document.body.scrollHeight+60)+'px';"></iframe> 
+        </div>
+      </div>
+
+      <div class="w3-half w3-container">
+        <div class="w3-topbar w3-border-green">
+          <h2>Information for all drivers associated with a rescue organization</h2>
+          <p>Requirement #3 (Scroll down to see all results)</p>
+          <iframe src="driverInfoIndex.php" style="width: 100%;" onload="this.style.height=(this.contentWindow.document.body.scrollHeight+60)+'px';"></iframe> 
+        </div>
+      </div>
+
+    </div>
+    
+    <div class="w3-row w3-container" style="margin:50px 0">
+
+      <div class="w3-half w3-container">
+        <div class="w3-topbar w3-border-teal">
+          <h2>Total amount donated to a given organization in a year</h2>
+          <p>Requirement #5</p>
+          <iframe src="totalDonationAmountIndex.php" style="width: 100%;" onload="this.style.height=(this.contentWindow.document.body.scrollHeight+60)+'px';"></iframe> 
+        </div>
+      </div>
+
+      <div class="w3-half w3-container">
+        <div class="w3-topbar w3-border-teal">
+          <h2>Animals that went from the SPCA directly to a shelter</h2>
+          <p>Requirement #7</p>
+          <iframe src="directAnimalsIndex.php" style="width: 100%;" onload="this.style.height=(this.contentWindow.document.body.scrollHeight+60)+'px';"></iframe> 
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+
+</html>
